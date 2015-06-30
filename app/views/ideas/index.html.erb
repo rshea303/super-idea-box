@@ -3,8 +3,8 @@ Super IdeaBox
 <button type="button" class="new-idea-button">Create New Idea</button>
 
 <div class="row">
-  <div class="six columns">
-    <%= form_for @idea do |f| %>
+  <div class="six columns new-idea-form hidden">
+    <%= form_for @idea, remote: true do |f| %>
       <%= f.label :title %>
       <%= f.text_field :title %>
       <%= f.label :description %>
@@ -12,7 +12,8 @@ Super IdeaBox
       <%= f.submit "Submit New Idea" %>
     <% end %>
   </div>
-  <div class="six columns">
+
+  <div class="six columns idea-list">
     Bright Ideas
   </div>
 </div>
