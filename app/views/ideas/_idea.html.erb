@@ -1,5 +1,7 @@
 <div class="idea">
   <%= idea.title %> : <br>
   <%= idea.description %> <br>
-  <button type="button" class="update-button" data-id="<%= idea.id %>">Update Idea</button>
+  <%= link_to edit_idea_path(idea), remote: true do %>
+    <button type="button" class="update-button">Update Idea</button>
+  <% end %>
 </div>

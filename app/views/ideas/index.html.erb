@@ -19,15 +19,10 @@
             <% end %>
       </div>
 
-      <div class="five column update-form hidden">
-            <%= form_for @idea, method: :update, remote: true do |f| %>
-              <%= f.label :title %>
-              <%= f.text_field :title %>
-              <%= f.label :description %>
-              <%= f.text_field :description %><br>
-              <%= f.submit "Update Idea" %>
-            <% end %>
+      <div class="row">
+        <div class="five column idea-form hidden"></div>
       </div>
+
       <div class="five columns idea-list">
           Bright Ideas
             <%= render @ideas %>
