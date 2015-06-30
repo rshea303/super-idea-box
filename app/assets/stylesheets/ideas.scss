@@ -1,3 +1,25 @@
 // Place all the styles related to the ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.head-banner {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.idea-list {
+  margin-top: 50px;
+  border-radius: 21px;
+  -moz-border-radius: 21px;
+  -webkit-border-radius: 21px;
+  border: 3px solid #882838;
+  // width: 50%;
+  text-align: center;
+  float: right;
+}
+
+.new-idea-form {
+}

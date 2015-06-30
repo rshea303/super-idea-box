@@ -1,18 +1,32 @@
-Super IdeaBox
+<div class="container">
 
-<button type="button" class="new-idea-button">Create New Idea</button>
+  <div class="twelve columns">
 
-<div class="row">
-  <div class="six columns">
-    <%= form_for @idea do |f| %>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-      <%= f.label :description %>
-      <%= f.text_field :description %>
-      <%= f.submit "Submit New Idea" %>
-    <% end %>
-  </div>
-  <div class="six columns">
-    Bright Ideas
+    <div class="head-banner">
+      <h2 style="align: center">Super IdeaBox</h2>
+
+      <button type="button" class="new-idea-button">Create New Idea</button>
+    </div>
+
+    <div class="row">
+      <div class="five column new-idea-form hidden">
+            <%= form_for @idea, remote: true do |f| %>
+              <%= f.label :title %>
+              <%= f.text_field :title %>
+              <%= f.label :description %>
+              <%= f.text_field :description %><br>
+              <%= f.submit "Submit New Idea" %>
+            <% end %>
+      </div>
+
+      <div class="row">
+        <div class="five column idea-form hidden"></div>
+      </div>
+
+      <div class="five columns idea-list">
+        <%= render @ideas %>
+      </div>
+    </div>
+
   </div>
 </div>
