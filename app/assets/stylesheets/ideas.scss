@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.head-banner {
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
@@ -15,4 +19,7 @@
   // width: 50%;
   text-align: center;
   float: right;
+}
+
+.new-idea-form {
 }
