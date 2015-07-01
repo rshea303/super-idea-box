@@ -1,1 +1,2 @@
-$(".idea-list").append("<%= j render @idea %>")
+$(".idea-list").html("<%= escape_javascript(render @ideas) %>");
+$(".idea-form").slideUp(350);
