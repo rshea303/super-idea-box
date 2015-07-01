@@ -15,6 +15,22 @@ class IdeasController < ApplicationController
     @idea.save
   end
 
+  def edit
+    @idea = Idea.find(params[:id])
+  end
+
+  def update
+    @ideas = Idea.all
+    @idea = Idea.find(params[:id])
+    @idea.update_attributes(idea_params)
+  end
+ 
+  def destroy
+    @idea = Idea.find(params[:id]) 
+    @ideas = Idea.all
+    @idea.destroy
+  end
+
   private
 
   def idea_params
