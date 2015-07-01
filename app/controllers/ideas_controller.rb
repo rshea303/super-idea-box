@@ -1,19 +1,34 @@
 class IdeasController < ApplicationController
+  
+  def new
+    @idea = Idea.new
+  end
+
   def index
     @idea = Idea.new
     @ideas = Idea.all
   end
 
   def create
+    @ideas = Idea.all
     @idea = Idea.new(idea_params)
-    if @idea.save
-      respond_to do |f|
-        f.html { redirect_to @idea}
-        f.js
-      end
-    else
-      render :new
-    end
+    @idea.save
+  end
+
+  def edit
+    @idea = Idea.find(params[:id])
+  end
+
+  def update
+    @ideas = Idea.all
+    @idea = Idea.find(params[:id])
+    @idea.update_attributes(idea_params)
+  end
+ 
+  def destroy
+    @idea = Idea.find(params[:id]) 
+    @ideas = Idea.all
+    @idea.destroy
   end
 
   private

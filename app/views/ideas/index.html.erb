@@ -5,20 +5,12 @@
     <div class="head-banner">
       <h2 style="align: center">Super IdeaBox</h2>
 
+      <%= link_to new_idea_path, remote: true do %>
       <button type="button" class="new-idea-button">Create New Idea</button>
+    <% end %>
     </div>
 
     <div class="row">
-      <div class="five column new-idea-form hidden">
-            <%= form_for @idea, remote: true do |f| %>
-              <%= f.label :title %>
-              <%= f.text_field :title %>
-              <%= f.label :description %>
-              <%= f.text_field :description %><br>
-              <%= f.submit "Submit New Idea" %>
-            <% end %>
-      </div>
-
       <div class="row">
         <div class="five column idea-form hidden"></div>
       </div>
