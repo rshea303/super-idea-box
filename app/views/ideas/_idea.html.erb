@@ -1,12 +1,15 @@
 <div class="idea">
-  <%= idea.title %> : <br>
-  <%= idea.description %> <br>
-  <%= idea.id %> <br>
-  <%= link_to edit_idea_path(idea), remote: true do %>
-    <button type="button" class="update-button">Update Idea</button>
-  <% end %>
-  <br>
-  <%= link_to idea, remote: true, method: :delete, data: { confirm: "Are you sure?" } do %>
-    <button type="button" class="delete-button">Delete</button>
-  <% end %>
+  <div class="row" style="padding: 5px;">
+    <p><%= idea.title %></p>
+    <p><%= idea.description %></p>
+  </div>
+  <p>ID: <%= idea.id %></p>
+  <div class="row">
+    <span><%= link_to edit_idea_path(idea), remote: true do %>
+      <button type="button" class="update-button">Update Idea</button>
+    <% end %></span>
+  <span><%= link_to idea, remote: true, method: :delete, data: { confirm: "Are you sure?" } do %>
+      <button type="button" class="delete-button">Delete</button>
+    <% end %></span>
+  </div>
 </div>
